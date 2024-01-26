@@ -34,4 +34,3 @@ SQLAlchemy==2.0.25
 starlette==0.35.1
 typing_extensions==4.9.0
 uvicorn==0.20.0
-uvloop==0.17.0
