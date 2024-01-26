@@ -5,4 +5,4 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
 RUN alembic upgrade head
-RUN gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicronWorker
+CMD gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicronWorker
