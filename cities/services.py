@@ -14,7 +14,7 @@ class CityServices:
     def __init__(self, repository):
         self.repo: CityRepo = repository
 
-    async def get(self, **kwargs) -> Union[CityGet, responses]:
+    async def get(self, **kwargs) -> Union[CityGet, dict]:
         """Возвращает данные объекта."""
         try:
             city = await self.repo.get(**kwargs)
@@ -52,7 +52,7 @@ class CityServices:
         finally:
             await self.repo.session.close()
 
-    async def delete(self, **kwargs) -> responses:
+    async def delete(self, **kwargs) -> dict:
         """Удаляет данные объекта."""
         try:
             result = await self.repo.delete(**kwargs)
