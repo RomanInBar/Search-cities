@@ -19,8 +19,8 @@ def get_objects(objects: list, coordinates: dict) -> list:
     out = [None, None]
     distance = [float('inf'), float('inf')]
     for index in range(len(objects)):
-        lat = abs(objects[index].latitute - latitute)
-        lon = abs(objects[index].longtitute - longtitute)
+        lat = objects[index].latitute - latitute
+        lon = objects[index].longtitute - longtitute
         d = ((lat**2) + (lon**2)) ** 0.5
         if d == 0:
             continue
