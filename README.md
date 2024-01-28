@@ -25,3 +25,6 @@ DB_PORT: str
 DB_NAME: str  
 POSTGRES_PASSWORD: str  
 POSTGRES_USER: str  
+
+##
+Документация API: https://search-cities-i5t1.onrender.com/docs
