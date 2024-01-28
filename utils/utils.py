@@ -22,7 +22,7 @@ def get_objects(objects: list, coordinates: dict) -> list:
         lat = abs(objects[index].latitute - latitute)
         lon = abs(objects[index].longtitute - longtitute)
         d = lat + lon
-        if d < 0.1:
+        if d == 0:
             continue
         if d < distance[1]:
             distance[0], distance[1] = d, distance[0]
