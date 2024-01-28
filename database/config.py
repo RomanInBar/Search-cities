@@ -5,7 +5,6 @@ load_dotenv()
 
 
 class Settings(BaseSettings):
-    MODE: str
     DRIVER: str
     USER: str
     DB_PASS: str

@@ -7,4 +7,21 @@
  - запрашивать информацию о городах из хранилища  
  - по заданным широте и долготе точки выдаёт 2 ближайших к ней города из присутствующих в хранилище
 
-Стэк: Python 3.11, FasAPI, SQLAlchemy, PostgreSQL, Alembic, Docker, docker-compose
+#### Стэк:
+Python 3.11;  
+FasAPI;  
+SQLAlchemy;  
+PostgreSQL;  
+Alembic;  
+Docker;  
+docker-compose  
+
+## Шаблон env файла
+DRIVER: str  
+USER: str  
+DB_PASS: str  
+DB_HOST: str  
+DB_PORT: str  
+DB_NAME: str  
+POSTGRES_PASSWORD: str  
+POSTGRES_USER: str  
