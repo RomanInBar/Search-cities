@@ -21,7 +21,7 @@ def get_objects(objects: list, coordinates: dict) -> list:
     for index in range(len(objects)):
         lat = abs(objects[index].latitute - latitute)
         lon = abs(objects[index].longtitute - longtitute)
-        d = lat + lon
+        d = ((lat**2) + (lon**2)) ** 0.5
         if d == 0:
             continue
         if d < distance[0]:
