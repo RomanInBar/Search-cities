@@ -24,7 +24,12 @@ def get_objects(objects: list, coordinates: dict) -> list:
         d = lat + lon
         if d == 0:
             continue
-        if d < distance[1]:
+        if d < distance[0]:
             distance[0], distance[1] = d, distance[0]
-            out[0], out[1] = out[1], objects[index]
+            out[0], out[1] = objects[index], out[0]
+        elif d < distance[1]:
+            distance[1] = d
+            out[1] = objects[index]
+        else:
+            continue
     return out

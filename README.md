@@ -17,14 +17,14 @@ Docker;
 docker-compose  
 
 ## Шаблон env файла
-DRIVER: str  
-USER: str  
-DB_PASS: str  
-DB_HOST: str  
-DB_PORT: str  
-DB_NAME: str  
-POSTGRES_PASSWORD: str  
-POSTGRES_USER: str  
+DRIVER  
+USER  
+DB_PASS  
+DB_HOST  
+DB_PORT    
+DB_NAME    
+POSTGRES_PASSWORD    
+POSTGRES_USER   
 
 ##
 Документация API: https://search-cities-i5t1.onrender.com/docs
