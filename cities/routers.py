@@ -6,7 +6,7 @@ from cities.depends import CityServices, get_services
 from cities.schemas import (CityCreate, CityGet, CoordinatesShema,
                             ResponseSchema)
 
-router = APIRouter(prefix='/city', tags=['City'])
+router = APIRouter(prefix='/cities', tags=['City'])
 
 
 @router.get(
@@ -20,7 +20,7 @@ async def get(pk: int, service: CityServices = Depends(get_services)):
 
 
 @router.get(
-    '/all',
+    '/',
     response_model=Union[list[CityGet], ResponseSchema],
     summary='Получить данные о всех городах',
 )
@@ -30,7 +30,7 @@ async def get_all(service: CityServices = Depends(get_services)):
 
 
 @router.post(
-    '/create',
+    '/',
     response_model=Union[CityGet, ResponseSchema],
     summary='Создать новую запись',
 )
@@ -42,7 +42,7 @@ async def create(
 
 
 @router.delete(
-    '/delete/{pk:int}', response_model=ResponseSchema, summary='Удалить запись'
+    '/{pk:int}', response_model=ResponseSchema, summary='Удалить запись'
 )
 async def delete(pk: int, service: CityServices = Depends(get_services)):
     response = await service.delete(id=pk)
